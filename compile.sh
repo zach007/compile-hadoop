@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# compile hadoop 2.7.2 by default
-version=${1:-2.7.2}
+# compile hadoop 2.8.2 by default
+version=${1:-2.8.2}
 
 cd /hadoop-$version-src
 
