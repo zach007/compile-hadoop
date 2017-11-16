@@ -15,7 +15,7 @@ sudo docker build -t kiwenlau/compile-hadoop .
 ####Download [Hadoop source code](http://archive.apache.org/dist/hadoop/core/)
 
 ```
-export VERSION=2.7.2
+export VERSION=2.8.2
 wget http://archive.apache.org/dist/hadoop/core/hadoop-$VERSION/hadoop-$VERSION-src.tar.gz
 tar -xzvf hadoop-$VERSION-src.tar.gz
 ```
@@ -37,7 +37,7 @@ output:
 [INFO] ------------------------------------------------------------------------
 
 
-comile hadoop 2.7.2 success!
+comile hadoop 2.8.2 success!
 ```
 
 you can find compiled hadoop file in:
@@ -48,14 +48,5 @@ hadoop-2.3.0-src/hadoop-dist/target/hadoop-2.3.0.tar.gz
 
 change the value of VERSION, you can compile other version of Hadoop
 
-####Download compiled Hadoop
-
-```
-wget https://github.com/kiwenlau/compile-hadoop/releases/download/2.3.0/hadoop-2.3.0.tar.gz
-wget https://github.com/kiwenlau/compile-hadoop/releases/download/2.4.0/hadoop-2.4.0.tar.gz
-wget https://github.com/kiwenlau/compile-hadoop/releases/download/2.5.0/hadoop-2.5.0.tar.gz
-wget https://github.com/kiwenlau/compile-hadoop/releases/download/2.6.0/hadoop-2.6.0.tar.gz
-wget https://github.com/kiwenlau/compile-hadoop/releases/download/2.7.0/hadoop-2.7.0.tar.gz
-wget https://github.com/kiwenlau/compile-hadoop/releases/download/2.7.2/hadoop-2.7.2.tar.gz
 ```
 
