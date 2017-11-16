@@ -29,15 +29,17 @@ sudo docker run -v $(pwd)/hadoop-$VERSION-src:/hadoop-$VERSION-src kiwenlau/comp
 output:
 
 ```
+[INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 23:46.056s
-[INFO] Finished at: Tue May 31 16:40:53 UTC 2016
-[INFO] Final Memory: 210M/915M
+[INFO] Total time: 1:05:17.523s
+[INFO] Finished at: Thu Nov 16 09:09:58 UTC 2017
+[INFO] Final Memory: 212M/594M
 [INFO] ------------------------------------------------------------------------
 
 
 comile hadoop 2.8.2 success!
+
 ```
 
 you can find compiled hadoop file in:
