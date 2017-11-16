@@ -1,18 +1,23 @@
-##Compile Hadoop in Docker container
+## 使用docker编译hadoop镜像
 
-####Download docker image
+####直接使用：下载docker镜像
+
 
 ```
 sudo docker pull kiwenlau/compile-hadoop
 ```
 
-or you can build kiwenlau/comile-hadoop image by your self
+####自定义使用：
 
 ```
-sudo docker build -t kiwenlau/compile-hadoop .
+git clone git@github.com:zach007/compile-hadoop.git
+cd compile-hadoop
+sudo docker build -t zach007/compile-hadoop .
 ```
+######备注：如需要自己定义jdk版本或者hadoop版本，可以修改dockerfile或者关联的compile.sh
 
-####Download [Hadoop source code](http://archive.apache.org/dist/hadoop/core/)
+
+####下载hadoop源码 [Hadoop source code](http://archive.apache.org/dist/hadoop/core/)
 
 ```
 export VERSION=2.8.2
@@ -20,7 +25,7 @@ wget http://archive.apache.org/dist/hadoop/core/hadoop-$VERSION/hadoop-$VERSION-
 tar -xzvf hadoop-$VERSION-src.tar.gz
 ```
 
-####Run Docker container, compile hadoop inside container
+####运行docker容器，并且在里面编译hadoop
 
 ```
 sudo docker run -v $(pwd)/hadoop-$VERSION-src:/hadoop-$VERSION-src kiwenlau/compile-hadoop /root/compile.sh $VERSION
@@ -42,13 +47,11 @@ comile hadoop 2.8.2 success!
 
 ```
 
-you can find compiled hadoop file in:
-
+编译后的hadoop文件路径
 ```
-hadoop-2.3.0-src/hadoop-dist/target/hadoop-2.3.0.tar.gz
-```
-
-change the value of VERSION, you can compile other version of Hadoop
-
+/hadoop-2.8.2-src/hadoop-dist/target/hadoop-2.8.2.tar.gz
 ```
 
+其他编译后的版本hadoop，参见release页面
+
+运行：参照 https://github.com/zach007/hadoop-cluster-docker
